@@ -119,7 +119,10 @@ pair<pair<int,bool>,vector<int>> compare_binaries_compression(string binary, str
             pattern_consistant = false;
         }
     }
-    return {{mismatches,pattern_consistant},places};
+    if(consecutive_check==mismatches){
+        return {{mismatches,true},places};
+    }
+    return {{mismatches,false},places};
 }
 
 //producing mis matches
@@ -246,7 +249,8 @@ string compress(vector<dic_entry> compressed_dictionary,vector<string> original_
         //     }
         //     cout<<endl;
         // }
-        // cout<<" +++++++++\n Compressed Binary : "<<temp_compressed_entry<<"\n+++++++++++++\n";
+        // cout<<" +++++++++++++\n Compressed Binary : "<<temp_compressed_entry<<"\n+++++++++++++\n";
+        // cout<<" +++++++++\n  Index of the Binary: "<<i-1<<"\n+++++++++++++\n";
         // cout<<" Original Binary : "<<original<<endl;
         // cout<<" One Consecutive Binary : "<<one_consecutive<<endl;
         // cout<<" Two Consecutive Binary : "<<two_consecutive<<endl;
