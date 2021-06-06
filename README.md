@@ -1,14 +1,14 @@
 # code_compression
 
 ## Compile the code
-    ``` g++ SIM.cpp -o SIM ```
+``` g++ SIM.cpp -o SIM ```
 
 ## Run the code
 
 * ### For Compression
-        ``` ./SIM 1 ``` 
+    ``` ./SIM 1 ``` 
 * ### For Decompression
-        ``` ./SIM 2 ``` 
+    ``` ./SIM 2 ``` 
 
 ## Compression Formats Used
  * Run length encoding - RLE
